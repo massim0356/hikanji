@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_06_26_142303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "kanjis", force: :cascade do |t|
+    t.string "character"
+    t.integer "grade"
+    t.integer "stroke_count"
+    t.string "meanings"
+    t.string "kun_readings"
+    t.string "on_readings"
+    t.integer "jlpt"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
