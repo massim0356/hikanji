@@ -4,8 +4,9 @@
           params[:query],
           class: "form-control",
           id: "search-form",
-          placeholder: "Enter a kanji"
+          placeholder: "Enter a kanji or a kanji reading"
         %>
+    <%= select_tag :dropdown_selection, options_for_select(['Kanji','Kanji Reading']) %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
@@ -14,7 +15,7 @@
 <% else %>
   <div class="wrapper">
     <div class="KanjiCard">
-      <p class="KanjiCard_kanji" id="kanji"><%= @results['kanji'] %></p>
+      <p class="KanjiCard_kanji" id="kanji"><%= @results['main_kanji'] %></p>
     </div>
   </div>
 <% end %>
