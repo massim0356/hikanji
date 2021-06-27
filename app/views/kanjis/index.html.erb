@@ -9,15 +9,12 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
-
-
-
-  <% if @results == 'No results found' %>
-    <h1><%= @results %></h1>
-  <% else %>
-    <div class="wrapper">
-      <div class="KanjiCard">
-        <p class="KanjiCard_kanji" id="kanji"><%= @results['kanji'] %></p>
-      </div>
+<% if @results == 'No results found' %>
+  <h1><%= @results %></h1>
+<% else %>
+  <div class="wrapper">
+    <div class="KanjiCard">
+      <p class="KanjiCard_kanji" id="kanji"><%= @results['kanji'] %></p>
     </div>
-  <% end %>
+  </div>
+<% end %>

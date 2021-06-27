@@ -5,8 +5,8 @@ class Kanji < ApplicationRecord
     RestClient.get(@url, { content_type: :json })
   end
 
-  def self.retrieve_results(param)
-    @url = "https://kanjiapi.dev/v1/kanji/#{URI::encode(param.force_encoding('ASCII-8BIT'))}"
+  def self.retrieve_kanji(param)
+    @url = "https://kanjiapi.dev/v1/kanji/#{URI.encode(param.force_encoding('ASCII-8BIT'))}"
     begin
       JSON.parse(Kanji.get_data) if Kanji.get_data.code == 200
     rescue RestClient::NotFound

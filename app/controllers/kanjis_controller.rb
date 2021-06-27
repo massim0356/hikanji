@@ -1,5 +1,7 @@
 class KanjisController < ApplicationController
   def index
-    @results = Kanji.retrieve_results("#{params[:query]}")
+    # rubocop:disable
+    @results = Kanji.retrieve_kanji("#{params[:query]}")
+    # rubocop:enable
   end
 end
