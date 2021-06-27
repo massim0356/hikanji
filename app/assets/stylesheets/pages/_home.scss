@@ -1,1 +1,20 @@
 // Specific CSS for your home-page
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.KanjiCard {
+  width: 350px;
+  min-height: 250px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px -3px gray;
+  font-size: 15vh;
+}
+
+.KanjiCard_kanji {
+  padding: 20%;
+}

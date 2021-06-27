@@ -1,0 +1,20 @@
+<div class="container">
+  <%= form_tag kanjis_path, method: :get, class: "form-search" do  %>
+    <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          id: "search-form",
+          placeholder: "Enter a kanji"
+        %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<% unless params[:query].nil? %>
+  <div class="wrapper">
+    <div class="KanjiCard" id="card">
+      <p class="KanjiCard_kanji" id="kanji"><%= @results['kanji'] %></p>
+    </div>
+  </div>
+<% end %>
