@@ -1,6 +1,5 @@
 class KanjisController < ApplicationController
   def index
-    @results = Kanji.retrieve_results("#{params[:query]}");
-    raise
+    @results = Kanji.retrieve_results("#{params[:query]}")
   end
 end

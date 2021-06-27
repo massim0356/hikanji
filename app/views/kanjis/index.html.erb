@@ -11,10 +11,13 @@
 </div>
 
 
-<% unless params[:query].nil? %>
-  <div class="wrapper">
-    <div class="KanjiCard">
-      <p class="KanjiCard_kanji" id="kanji"><%= @results %></p>
+
+  <% if @results == 'No results found' %>
+    <h1><%= @results %></h1>
+  <% else %>
+    <div class="wrapper">
+      <div class="KanjiCard">
+        <p class="KanjiCard_kanji" id="kanji"><%= @results %></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
