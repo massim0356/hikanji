@@ -1,0 +1,10 @@
+<%= form_tag kanjis_path, method: :get, class: "form-search" do  %>
+  <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          id: "search-form",
+          placeholder: "Enter a kanji or a kanji reading"
+        %>
+  <%= select_tag :dropdown_selection, options_for_select(['Kanji','Kanji Reading']) %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>

@@ -1,21 +1,12 @@
-<div class="container">
-  <%= form_tag kanjis_path, method: :get, class: "form-search" do  %>
-    <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          id: "search-form",
-          placeholder: "Enter a kanji or a kanji reading"
-        %>
-    <%= select_tag :dropdown_selection, options_for_select(['Kanji','Kanji Reading']) %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+<div class="container search">
+  <%= render 'shared/searchbar' %>
 </div>
-<% if @results == 'No results found' %>
-  <h1><%= @results %></h1>
+<% if @results == 'No results found' || @results_readings == 'No results found' %>
+  <h1>No results found</h1>
 <% else %>
-  <div class="wrapper">
-    <div class="KanjiCard">
-      <p class="KanjiCard_kanji" id="kanji"><%= @results['main_kanji'] %></p>
-    </div>
-  </div>
+  <% if @switch %>
+    <%= render 'kanjis/results', @results %>
+  <% elsif @switch2 %>
+    <%= render 'kanjis/results_reading', @results_readings %>
+  <% end %>
 <% end %>
