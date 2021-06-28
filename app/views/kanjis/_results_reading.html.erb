@@ -1,7 +1,9 @@
 <div class="wrapper">
   <% @results_readings['main_kanji'].each do |kanji| %>
-    <div class="KanjiCard_readings">
-      <p class="KanjiCard_kanji_reading" id="kanji"><%= kanji %></p>
-    </div>
+    <%= link_to kanjis_path(query: kanji, dropdown_selection: 'Kanji') do %>
+      <div class="KanjiCard_readings">
+        <p class="KanjiCard_kanji_reading" id="kanji"><%= kanji %></p>
+      </div>
+    <% end %>
   <% end %>
 </div>
