@@ -7,32 +7,8 @@
   padding-top: 20px;
 }
 
-.KanjiCard {
-  width: 350px;
-  min-height: 250px;
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 20px -3px gray;
-  font-size: 15vh;
-}
-
-.KanjiCard_kanji {
-  padding: 20%;
-}
-
-.KanjiCard_kanji_reading {
-  padding: 20%;
-}
-
-.KanjiCard_readings {
-  width: 150px;
-  height: 170px;
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 10vh;
-  margin: auto;
-  margin-top: 10px;
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
 }

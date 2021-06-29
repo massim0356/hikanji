@@ -1,0 +1,22 @@
+.wrapper-kanji {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  flex-direction: column;
+}
+
+.KanjiCard {
+  width: 350px;
+  min-height: 250px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px -3px gray;
+  font-size: 15vh;
+}
+
+.KanjiCard_kanji {
+  padding: 20%;
+}
