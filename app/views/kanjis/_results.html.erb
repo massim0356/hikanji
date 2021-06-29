@@ -2,4 +2,20 @@
   <div class="KanjiCard">
     <p class="KanjiCard_kanji" id="kanji"><%= @results['kanji'] %></p>
   </div>
+  <div class="kanji-info">
+    <p>Stroke Count:<%=@results['stroke_count']%></p>
+    <% @results['meanings'].each do |meaning| %>
+      <p><%=meaning%></p>
+    <% end %>
+    <% @results['kun_readings'].each do |kun| %>
+      <p><%=kun%></p>
+    <% end %>
+    <% @results['on_readings'].each do |on| %>
+      <p><%=on%></p>
+    <% end %>
+    <% @results['name_readings'].each do |name| %>
+      <p><%=name%></p>
+    <% end %>
+    <p>JLPT:<%=@results['jlpt']%></p>
+  </div>
 </div>
