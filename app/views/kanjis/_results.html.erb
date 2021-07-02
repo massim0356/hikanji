@@ -4,10 +4,10 @@
   </div>
   <div class="kanji-info">
     <p>Stroke Count: <%=@results['stroke_count']%></p>
-    <p>Meanings: <%= @results['meanings'].join(', ')%></p>
-    <p>Kun Readings: <%= @results['kun_readings'].join(', ')%></p>
-    <p>On Readings: <%= @results['on_readings'].join(', ')%></p>
-    <p>Name Readings: <%= @results['name_readings'].any? ? @results['name_readings'].join(', ') : 'N/A'%></p>
-    <p>JLPT:<%=@results['jlpt']%></p>
+    <p>Meanings: <%= @results['meanings'].any? ? @results['meanings'].join(', ') : ' N/A'%></p>
+    <p>Kun Readings: <%= @results['kun_readings'].any? ? @results['on_readings'].join(', ') : ' N/A'%></p>
+    <p>On Readings: <%= @results['on_readings'].any? ? @results['kun_readings'].join(', ') : ' N/A'%></p>
+    <p>Name Readings: <%= @results['name_readings'].any? ? @results['name_readings'].join(', ') : ' N/A'%></p>
+    <p>JLPT:<%=@results['jlpt'].nil? ?  ' N/A' : @results['jlpt']%></p>
   </div>
 </div>
